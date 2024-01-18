@@ -9,8 +9,18 @@ const sentence = "hello";
 //   }
 // }, 500) 
 
-for (const char of sentence) {
+// for (const char of sentence) {
+//   setTimeout(() => {
+//     console.log(char);
+//   }, 500)
+// }
+
+function doScaledTimeout(i) {
   setTimeout(() => {
-    console.log(char);
-  }, 500)
+    for (const char of sentence) {
+      console.log(char);
+    };
+  }, i * 5000);
 }
+
+doScaledTimeout(1)
